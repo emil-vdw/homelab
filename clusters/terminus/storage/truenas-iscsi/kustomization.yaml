@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: truenas-iscsi
 resources:
   - helmrelease.yaml
-  - namespace.yaml
 
 configMapGenerator:
   - name: truenas-iscsi-values
