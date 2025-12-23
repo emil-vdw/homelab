@@ -22,3 +22,5 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: truenas-iscsi-values
+    - kind: Secret
+      name: truenas-iscsi-secrets

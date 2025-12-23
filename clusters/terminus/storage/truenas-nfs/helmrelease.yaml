@@ -23,3 +23,5 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: truenas-nfs-values
+    - kind: Secret
+      name: truenas-nfs-secrets

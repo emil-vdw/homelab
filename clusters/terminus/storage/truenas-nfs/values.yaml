@@ -22,7 +22,6 @@ driver:
       protocol: http
       host: truenas.trantor.home.arpa
       port: 80
-      apiKey: ENC[AES256_GCM,data:mAcqdCgWAZV3qeoGjL83Zy+fcNDBhQWwtGU23d2QkB4pSepCygNqWmf/DGWYP/4lZMT1YFUkCgA+Xxa+51LSvXho,iv:mH1fuLYQmzZN5o76Il/qc1rrmsPoY7s60dVi2y7WL8w=,tag:BW2c6vtr5fzMT3U43oWo8w==,type:str]
       allowInsecure: true
     zfs:
       datasetParentName: tank/k3s-nfs
@@ -35,18 +34,3 @@ driver:
       shareHost: truenas.trantor.home.arpa
       shareMaprootUser: root
       shareMaprootGroup: root
-sops:
-  age:
-    - recipient: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
-      enc: |
-        -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBDNnI0azllWGRYUnZIRDM2
-        dU9SU25aSERFb09hRmdOWkNsU1M1UkFyTmdBCk5kdjhxak5EdXpNUHpWWGttQkpF
-        aXBVdXovNUF3Wi9TVDBxbUF5cWdneTAKLS0tIHZDZXhESkFyZkQwd29pMnFyeXow
-        UzlBZFNNTWtLaXRUdnR6Z1JER05JRDAKs+cDtv7u0jipUcmPwpFPpiN3iqzRg+lK
-        XHmNXWBuJZl2AtaIIC6z8GRWCLf6K5HX7j57+A0d4jkKdcq/Xffzcw==
-        -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-12-23T21:53:13Z"
-  mac: ENC[AES256_GCM,data:gqDGxjD9GLQmT8vHUvOhRDGBD12AUON2ojzlNA9IJvvTA0og0mFy5NW6E1t44SmVI6L1xcStoSKBUVk5S9LfGK14xpW/U4jDRiIj0Dvnm5YIUmW0mx9BWmXILmn6oNJx+gG5b9AckCukIC2v4TBgykYXzKGyW24yduQdLlCynjw=,iv:X4Y2sdwbvYRgXxjCAy8gicq7IhJcXFOk4w97Tj2UzUs=,tag:yf7BH9kgzVYmKqIejPMLFA==,type:str]
-  encrypted_regex: ^(data|stringData|apiKey|password|secret|token)$
-  version: 3.11.0
