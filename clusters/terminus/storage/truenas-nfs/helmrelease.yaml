@@ -18,3 +18,4 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: truenas-nfs-values
+      namespace: truenas-nfs

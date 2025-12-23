@@ -22,3 +22,4 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: truenas-iscsi-values
+      namespace: truenas-iscsi
