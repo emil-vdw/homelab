@@ -1,50 +1,50 @@
 csiDriver:
-    name: truenas-tank-nfs
-    fsGroupPolicy: File
+  name: truenas-tank-nfs
+  fsGroupPolicy: File
 storageClasses:
-    - name: truenas-tank-nfs
-      defaultClass: false
-      reclaimPolicy: Retain
-      volumeBindingMode: Immediate
-      allowVolumeExpansion: true
-      parameters:
-        fsType: nfs
-      mountOptions:
-        - noatime
-        - nfsvers=3
+  - name: truenas-tank-nfs
+    defaultClass: false
+    reclaimPolicy: Retain
+    volumeBindingMode: Immediate
+    allowVolumeExpansion: true
+    parameters:
+    fsType: nfs
+    mountOptions:
+    - noatime
+    - nfsvers=3
 driver:
-    config:
-        driver: freenas-api-nfs
-        instance_id: truenas-nfs
-        httpConnection:
-            protocol: http
-            host: truenas.trantor.home.arpa
-            port: 80
-            apiKey: ENC[AES256_GCM,data:kL5dO8x+rNOLyah4VyMl3LBdytIMTF49MeEESU3hbS1bzafqQtFBU4ndOsFzs+g1DNFHWo5dQoLa/MNE8ImMHDlP,iv:RFYTFGt+4BiPaNKDgZN3D5HD28iR8vXYe2ewMszB0hU=,tag:pfl2G0AVAk3ibFZ5Rv4PTg==,type:str]
-            allowInsecure: true
-        zfs:
-            datasetParentName: tank/k3s-nfs
-            detachedSnapshotsDatasetParentName: tank/k3s-nfs-snapshots
-            datasetEnableQuotas: true
-            datasetPermissionsMode: "0777"
-            datasetPermissionsUser: 0
-            datasetPermissionsGroup: 0
-        nfs:
-            shareHost: truenas.trantor.home.arpa
-            shareMaprootUser: root
-            shareMaprootGroup: root
+  config:
+    driver: freenas-api-nfs
+    instance_id: truenas-nfs
+    httpConnection:
+      protocol: http
+      host: truenas.trantor.home.arpa
+      port: 80
+      apiKey: ENC[AES256_GCM,data:kL5dO8x+rNOLyah4VyMl3LBdytIMTF49MeEESU3hbS1bzafqQtFBU4ndOsFzs+g1DNFHWo5dQoLa/MNE8ImMHDlP,iv:RFYTFGt+4BiPaNKDgZN3D5HD28iR8vXYe2ewMszB0hU=,tag:pfl2G0AVAk3ibFZ5Rv4PTg==,type:str]
+      allowInsecure: true
+    zfs:
+      datasetParentName: tank/k3s-nfs
+      detachedSnapshotsDatasetParentName: tank/k3s-nfs-snapshots
+      datasetEnableQuotas: true
+      datasetPermissionsMode: "0777"
+      datasetPermissionsUser: 0
+      datasetPermissionsGroup: 0
+    nfs:
+      shareHost: truenas.trantor.home.arpa
+      shareMaprootUser: root
+      shareMaprootGroup: root
 sops:
-    age:
-        - recipient: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBjVzJvRTFGNmNOR25Jc0Fm
-            eml0NWdwZlNCQjNtZWdlZGUwVEIyNzE0V0JvClN0ZlRrNEhPbjErN1hHaU1UUS9L
-            aWRxNUJrTW9FbzJ4Y2RaUXJRYmZSS3MKLS0tIG1PZUQ2NHVROHc2SU9lM0NtQnZV
-            N2tuK2RUQytaS0xuZzZQYk1BSi8rZk0KM/1Njs4mr3whWpqFTeMhws5qUeED02cQ
-            Wa/FKgKU91zFS+PJJVvF07WiPuIWsu+KbMuKc9oXUAf7H8p9G+/TwA==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-12-23T21:05:01Z"
-    mac: ENC[AES256_GCM,data:d2Ql1QHhpSBDNiYuIOxmDbSEhLBd2ByxELprP+9cv7+HOa4L2y+NfEji38siZnshGbdjXbtewbsvls8Of1wS28y3REPV0H0gfq8l+QrnRZZHcrBBI8rAfMYyb98DTraIfyDbIcCxuc+yyx7r8D2bmQZHYhtkFyTOsg45ENZfbPg=,iv:U1TAxU7+XQh1HKDKYovsga7lTTMzAfM0rU/+SdBisaE=,tag:iThY00gA97imc9or9WqkOQ==,type:str]
-    encrypted_regex: ^(data|stringData|apiKey|password|secret|token)$
-    version: 3.11.0
+  age:
+    - recipient: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBjVzJvRTFGNmNOR25Jc0Fm
+        eml0NWdwZlNCQjNtZWdlZGUwVEIyNzE0V0JvClN0ZlRrNEhPbjErN1hHaU1UUS9L
+        aWRxNUJrTW9FbzJ4Y2RaUXJRYmZSS3MKLS0tIG1PZUQ2NHVROHc2SU9lM0NtQnZV
+        N2tuK2RUQytaS0xuZzZQYk1BSi8rZk0KM/1Njs4mr3whWpqFTeMhws5qUeED02cQ
+        Wa/FKgKU91zFS+PJJVvF07WiPuIWsu+KbMuKc9oXUAf7H8p9G+/TwA==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-12-23T21:05:01Z"
+  mac: ENC[AES256_GCM,data:d2Ql1QHhpSBDNiYuIOxmDbSEhLBd2ByxELprP+9cv7+HOa4L2y+NfEji38siZnshGbdjXbtewbsvls8Of1wS28y3REPV0H0gfq8l+QrnRZZHcrBBI8rAfMYyb98DTraIfyDbIcCxuc+yyx7r8D2bmQZHYhtkFyTOsg45ENZfbPg=,iv:U1TAxU7+XQh1HKDKYovsga7lTTMzAfM0rU/+SdBisaE=,tag:iThY00gA97imc9or9WqkOQ==,type:str]
+  encrypted_regex: ^(data|stringData|apiKey|password|secret|token)$
+  version: 3.11.0
