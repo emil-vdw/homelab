@@ -1,0 +1,52 @@
+driver:
+    name: iscsi.truenas.io
+controller:
+    enabled: true
+node:
+    enabled: true
+storageClasses:
+    - name: truenas-fast-iscsi
+      defaultClass: false
+      reclaimPolicy: Retain
+      volumeBindingMode: WaitForFirstConsumer
+      allowVolumeExpansion: true
+      parameters:
+        fsType: ext4
+driverConfig:
+    driver: freenas-api-iscsi
+    instance_id: truenas-iscsi
+    httpConnection:
+        protocol: http
+        host: truenas.trantor.home.arpa
+        port: 80
+        apiKey: ENC[AES256_GCM,data:rZGsLak6LDmkTKcpeNSoa5FTN3ThFgfTlbCidoYtLA0xXd34OUelCXamYaNbnnjYbYq6gM64ZM5LdQ5aeXAi2Ax3,iv:FFe1o1V5iPiYvbNj5vPjt4Add33353gOR7GtxusZKdA=,tag:LrnCoOw77Kgovn07ViOKBw==,type:str]
+        apiVersion: 2
+        allowInsecure: true
+    zfs:
+        datasetParentName: fast/k3s-iscsi
+        detachedSnapshotsDatasetParentName: fast/k3s-iscsi-snapshots
+        datasetEnableQuotas: true
+        datasetEnableReservation: false
+    iscsi:
+        targetPortal: truenas.trantor.home.arpa:3260
+        targetGroups:
+            - targetGroupPortalGroup: 1
+              targetGroupInitiatorGroup: 1
+              targetGroupAuthType: None
+        extentInsecureTpc: true
+
+sops:
+    age:
+        - recipient: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBYUm93d0ExRkpXeThoejlJ
+            a0pTSFErbjJ2SWlINWYyTjQwdWloUFgyTFhnClZWNnI4UUhIci9NbkdVNnVMdGtE
+            S0hIYURVbyswS3l6NXZoN25EdDJ0MlUKLS0tIFliV3AwNU9yY3h2dGtmQTdRcjY1
+            Lzh5QkhlMUVHL3Y4Z1JmMnd4R3lCTkUKhapMfGd2Rs0tduFyl/LujYFTMTQxcOsE
+            MOE6ihZry3ZCvKGzXIRv22h0fCgvdcgBvAi0+2wI7pyi2GMH7urQaA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-12-23T13:55:34Z"
+    mac: ENC[AES256_GCM,data:OUijezEUy/B0YdUE+fNODamMefOGt8RkOX4m+ZPxdCX/tWSF2rnLgsn0+k4ri/TSLBORp+zgTThCRiA0bFKvjv6Aem2WIhmX7DRuw8Wklh66OCqBsufPxJmym8u8qnDJ5v9gAGXYO9zVbpdcPDcmEXPcrPNTKVZ5rCbJrQVy2I4=,iv:w/5oWeKeXXiF5F1FnCTNusW9Pkz1ca8aa0xWWE2CLNE=,tag:2V+Ed39sw9V20bcVRCbdHg==,type:str]
+    encrypted_regex: ^(data|stringData|apiKey|password|secret|token)$
+    version: 3.11.0
