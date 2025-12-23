@@ -14,11 +14,9 @@ spec:
         name: democratic-csi
         namespace: flux-system
   install:
-    createNamespace: true
     remediation:
       retries: 3
   upgrade:
-    createNamespace: true
     remediation:
       retries: 3
   valuesFrom:

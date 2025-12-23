@@ -4,6 +4,7 @@ namespace: truenas-iscsi
 resources:
   - helmrepository.yaml
   - helmrelease.yaml
+  - namespace.yaml
 configMapGenerator:
   - name: truenas-iscsi-values
     files:
