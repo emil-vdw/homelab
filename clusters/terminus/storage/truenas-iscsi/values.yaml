@@ -5,7 +5,7 @@ storageClasses:
   - name: truenas-fast-iscsi
     defaultClass: false
     reclaimPolicy: Retain
-    volumeBindingMode: Immediate
+    volumeBindingMode: WaitForFirstConsumer
     allowVolumeExpansion: true
     parameters:
       fsType: ext4
