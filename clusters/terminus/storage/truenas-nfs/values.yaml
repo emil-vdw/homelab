@@ -1,0 +1,48 @@
+driver:
+    name: nfs.truenas.io
+controller:
+    enabled: true
+node:
+    enabled: true
+storageClasses:
+    - name: truenas-tank-nfs
+      defaultClass: false
+      reclaimPolicy: Delete
+      volumeBindingMode: Immediate
+      allowVolumeExpansion: true
+      parameters:
+        fsType: nfs
+driverConfig:
+    driver: freenas-api-nfs
+    instance_id: truenas-nfs
+    httpConnection:
+        protocol: http
+        host: truenas.trantor.home.arpa
+        port: 80
+        apiKey: ENC[AES256_GCM,data:CBF+6C+xhNH8J+8azSOPZqw+FO4pI0UnuhYEHkS5L+0eis+ECHbOVebkdFpGw6MFpiEHteg9iizhAwHvtaDidhuE,iv:lCt/ms7EwcqmA/jDOyoFR7s39adqbMkU3LBTM6RPeXE=,tag:kas71PyuYchtA/1hv4bBfA==,type:str]
+    zfs:
+        datasetParentName: tank/k8s-nfs
+        detachedSnapshotsDatasetParentName: tank/k8s-nfs-snapshots
+        datasetEnableQuotas: true
+        datasetEnableReservation: false
+    nfs:
+        shareHost: truenas.trantor.home.arpa
+        shareAllowedNetworks:
+            - 192.168.10.0/24
+        shareAllowedHosts: []
+
+sops:
+    age:
+        - recipient: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoL010VFA4Wk5SMkVmbk5M
+            M3JQRm5xdWpMak85YTQzeWlFcjZvVkM3dFhVClR1ZkdKaGJHVktjNlZpdytXTEw3
+            MTFrazIzeXVGZjNOcFlhWnhyWU1mQ3cKLS0tIGRTa0FLWmNIc0xkbHBCNGNhcFhT
+            RFYvdUZrMm92K3dPSzY2bWFQMmhCNTQKq8+xgOtA5ea6CtWN1HPH/GDIFlR3iOio
+            rFnpb3ZSflaCA46cQoprmj33yHK7az5Mb7nnzp4aYmtI/V+cM5oo8g==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-12-23T14:12:59Z"
+    mac: ENC[AES256_GCM,data:cVf1zEiz0MuOW7ry2AxE1kcvJ16oNdIpspTQJJNDP5P4HAiprsjpNi11zLmkVCV2CKJIDtwp2XVeELl6EzdHN2QYYmelwp+YXZ7QjepY6Ezh5Nvb66ZQNQBZ1vDuFfYyXvJK4KxAWQFssUykLneD/1YdanhBUdk85rHyyaJqjuI=,iv:cT933ESFO2R06OKwPSaRtpgwfql/aLOOoA5iPlrX8M8=,tag:9pxf35HowLDIlESOb15lBg==,type:str]
+    encrypted_regex: ^(data|stringData|apiKey|password|secret|token)$
+    version: 3.11.0
