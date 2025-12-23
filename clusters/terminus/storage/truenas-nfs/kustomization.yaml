@@ -9,3 +9,5 @@ configMapGenerator:
   - name: truenas-nfs-values
     files:
       - values.yaml
+    options:
+      disableNameSuffixHash: true

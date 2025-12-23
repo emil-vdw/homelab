@@ -9,3 +9,5 @@ configMapGenerator:
   - name: truenas-iscsi-values
     files:
       - values.yaml
+    options:
+      disableNameSuffixHash: true
