@@ -4,7 +4,7 @@ metadata:
     name: sops-age
     namespace: flux-system
 stringData:
-    age.agekey: ENC[AES256_GCM,data:BG80BRW9ia3zIb+gZPTHHBeQ6VLF1KesWpV6bYs3Dhe2ebtHqjfVAKdvP+iu0DDKfRsvS3szQcXxT5CJarkNeSLUYChfMZa4DEjU,iv:OY/8Vqe/g5kL1q/39NQjPE/AZa1puwTK4WtGN5Mo5tA=,tag:7el2OVad+WGTjqlKgsYH3A==,type:str]
+    agekey: ENC[AES256_GCM,data:BG80BRW9ia3zIb+gZPTHHBeQ6VLF1KesWpV6bYs3Dhe2ebtHqjfVAKdvP+iu0DDKfRsvS3szQcXxT5CJarkNeSLUYChfMZa4DEjU,iv:OY/8Vqe/g5kL1q/39NQjPE/AZa1puwTK4WtGN5Mo5tA=,tag:7el2OVad+WGTjqlKgsYH3A==,type:str]
 sops:
     age:
         - recipient: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
