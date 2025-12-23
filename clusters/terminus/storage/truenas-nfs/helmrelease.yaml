@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: truenas-nfs
-  namespace: flux-system
+  namespace: truenas-nfs
 spec:
   interval: 15m
   targetNamespace: truenas-nfs
@@ -18,4 +18,3 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: truenas-nfs-values
-      namespace: truenas-nfs
