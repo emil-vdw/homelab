@@ -1,6 +1,7 @@
 csiDriver:
   name: truenas-tank-nfs
   fsGroupPolicy: File
+
 storageClasses:
   - name: truenas-tank-nfs
     defaultClass: false
@@ -8,10 +9,11 @@ storageClasses:
     volumeBindingMode: Immediate
     allowVolumeExpansion: true
     parameters:
-    fsType: nfs
+      fsType: nfs
     mountOptions:
-    - noatime
-    - nfsvers=3
+      - noatime
+      - nfsvers=3
+
 driver:
   config:
     driver: freenas-api-nfs
