@@ -1,4 +1,4 @@
-driver:
+csiDriver:
     name: nfs.truenas.io
 controller:
     enabled: true
