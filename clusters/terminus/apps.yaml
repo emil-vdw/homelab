@@ -15,8 +15,8 @@ spec:
     secretRef:
       name: sops-age
   sourceRef:
-    kind: ExternalArtifact
-    name: apps
-  path: ./
+    kind: GitRepository
+    name: flux-system
+  path: ./apps
   prune: true
   wait: true

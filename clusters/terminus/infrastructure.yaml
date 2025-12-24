@@ -15,9 +15,9 @@ spec:
     secretRef:
       name: sops-age
   sourceRef:
-    kind: ExternalArtifact
-    name: infrastructure
-  path: ./controllers
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/controllers
   prune: true
   wait: true
 ---
@@ -37,7 +37,7 @@ spec:
     secretRef:
       name: sops-age
   sourceRef:
-    kind: ExternalArtifact
-    name: infrastructure
-  path: ./configs
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/configs
   prune: true
