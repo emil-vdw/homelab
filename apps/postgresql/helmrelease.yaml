@@ -28,7 +28,7 @@ spec:
     # Basic chart identity
     # -----------------------------------------------------------------------------
     nameOverride: "postgres"
-    namespaceOverride: "databases"
+    namespaceOverride: "postgres"
 
     # -----------------------------------------------------------------------------
     # Database type and version
