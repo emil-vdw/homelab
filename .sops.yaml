@@ -1,6 +1,8 @@
 creation_rules:
   - path_regex: .*values.yaml$
     age: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
+  - path_regex: .*values.enc.yaml$
+    age: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
   - path_regex: ".*\\.yaml"
     encrypted_regex: '^(data|stringData)$'
     age: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
