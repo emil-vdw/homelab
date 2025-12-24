@@ -5,9 +5,10 @@ resources:
   - helmrelease.yaml
   - namespace.yaml
 
-configMapGenerator:
+secretGenerator:
   - name: truenas-nfs-values
     files:
-      - values.yaml
-    options:
-      disableNameSuffixHash: true
+      - values.yaml=values.enc.yaml
+
+configurations:
+  - kustomizeconfig.yaml

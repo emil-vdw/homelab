@@ -20,7 +20,5 @@ spec:
     remediation:
       retries: 3
   valuesFrom:
-    - kind: ConfigMap
-      name: truenas-iscsi-values
     - kind: Secret
-      name: truenas-iscsi-secrets
+      name: truenas-iscsi-values
