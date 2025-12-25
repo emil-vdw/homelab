@@ -36,7 +36,7 @@ spec:
     type: postgresql
 
     version:
-      postgresql: "18"
+      postgresql: "17"
 
     # -----------------------------------------------------------------------------
     # Mode of operation
