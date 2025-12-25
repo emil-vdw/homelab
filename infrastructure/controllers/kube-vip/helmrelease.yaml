@@ -22,4 +22,4 @@ spec:
       svc_enable: "false"
       # Control plane load balancing
       lb_enable: "false"
-      vip_leaderelection: "false"
+      vip_leaderelection: "true"
