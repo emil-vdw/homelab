@@ -16,7 +16,7 @@ spec:
   values:
     cm:
       data:
-        range-services: 192.168.20.80-192.168.20.120
+        range-global: 192.168.20.80-192.168.20.120
 
     # only reconcile normal LoadBalancer services (default)
     enableloadbalancerClass: false
