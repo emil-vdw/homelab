@@ -23,3 +23,6 @@ spec:
       # Control plane load balancing
       lb_enable: "false"
       vip_leaderelection: "true"
+
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: "true"
