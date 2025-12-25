@@ -21,7 +21,7 @@ spec:
       retries: 3
   values:
     crds:
-      enabled: false
+      enabled: true
 
       # This option makes it so that the "helm.sh/resource-policy": keep
       # annotation is added to the CRD. This will prevent Helm from uninstalling
