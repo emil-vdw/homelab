@@ -30,4 +30,4 @@ spec:
       enabled: true
       isDefaultClass: true
     nodeSelector:
-      node-role.kubernetes.io/control-plane: "false"
+      worker: "true"
