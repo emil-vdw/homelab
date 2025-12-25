@@ -6,3 +6,6 @@ metadata:
 spec:
   ipAddressPools:
     - lb-pool
+  nodeSelectors:
+    - matchLabels:
+        worker: "true"
