@@ -4,7 +4,7 @@ metadata:
   name: step-acme
 spec:
   acme:
-    server: https://ca.trantor.home.arpa:9000/acme/acme/directory
+    server: https://ca.trantor.home.arpa/acme/acme/directory
     email: vdwemil@protonmail.com
     privateKeySecretRef:
       name: step-acme-account
