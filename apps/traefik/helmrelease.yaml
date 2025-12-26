@@ -23,11 +23,22 @@ spec:
     service:
       type: LoadBalancer
       loadBalancerIP: 192.168.20.80
+
     logs:
       general:
         level: INFO
+
     ingressClass:
       enabled: true
       isDefaultClass: true
+
     nodeSelector:
       worker: "true"
+
+    providers:
+      kubernetesIngress:
+        enabled: true
+        allowEmptyServices: true
+
+      kubernetesCRD:
+        enabled: true
