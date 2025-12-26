@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cilium
+  namespace: kube-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: cilium
+      version: 1.18.5
+      sourceRef:
+        kind: HelmRepository
+        name: cilium
+        namespace: flux-system
+  values:
+    k8sServiceHost: "kube-api.terminus.home.arpa"
+    k8sServicePort: "6443"
+    kubeProxyReplacement: true
+    ipam:
+      mode: "kubernetes"
+    hubble:
+      enabled: true
+      relay:
+        enabled: true
+      ui:
+        enabled: true
