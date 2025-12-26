@@ -10,5 +10,5 @@ spec:
       chart: redis-operator
       sourceRef:
         kind: HelmRepository
-        name: redis-operator
+        name: ot-container
         namespace: flux-system
