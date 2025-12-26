@@ -89,6 +89,9 @@ spec:
           - name: vector
           - name: cube
           - name: earthdistance
+      - name: authentik
+        owner: authentik
+        user: authentik
 
     # -----------------------------------------------------------------------------
     # Backups
