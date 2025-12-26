@@ -78,6 +78,11 @@ spec:
           login: true
           passwordSecret:
             name: immich-db-credentials
+        - name: authentik
+          ensure: present
+          login: true
+          passwordSecret:
+            name: authentik-db-credentials
 
     # -----------------------------------------------------------------------------
     # Declarative database management
