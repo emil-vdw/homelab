@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: authentik-cert
+  namespace: authentik
+spec:
+  secretName: authentik-tls
+  issuerRef:
+    kind: ClusterIssuer
+    name: step-acme
+  dnsNames:
+    - auth.terminus.home.arpa
