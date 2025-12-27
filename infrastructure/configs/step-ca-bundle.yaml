@@ -8,6 +8,17 @@ spec:
     - useDefaultCAs: true
     - inLine: |
         -----BEGIN CERTIFICATE-----
+        MIIBojCCAUmgAwIBAgIRAJ9qBAp45jemkpluIQylwe0wCgYIKoZIzj0EAwIwGjEY
+        MBYGA1UEAxMPSG9tZWxhYiBSb290IENBMCAXDTI1MTIyMDEwNTE0N1oYDzIwNTUx
+        MjEzMTA1MTM3WjAiMSAwHgYDVQQDExdIb21lbGFiIEludGVybWVkaWF0ZSBDQTBZ
+        MBMGByqGSM49AgEGCCqGSM49AwEHA0IABA6pazh++59qoQWq53U0jg+nUJCMsAEO
+        SSsaRxZAPufTu5ZFk1tczdvAo2dKKoqRW+zTUzG3S7s+oNsmI0L1EHGjZjBkMA4G
+        A1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBTbUSQ7
+        vfM0r4enUeUyHSHbaPs9fDAfBgNVHSMEGDAWgBQUN7A5UNvKm6qGls8OMIgvRF2B
+        PjAKBggqhkjOPQQDAgNHADBEAiAXOHFLD4JfrNgvG9fCX4ocJknf0/EkjAdqXrOa
+        /0OWmAIgcXEzyh7vDEzs7GdWMf5CgTXz+bMXqhxwsqGLvGRVRz8=
+        -----END CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
         MIIBejCCASCgAwIBAgIRAJsInPOCUMOO3WyrmOpnHhYwCgYIKoZIzj0EAwIwGjEY
         MBYGA1UEAxMPSG9tZWxhYiBSb290IENBMCAXDTI1MTIxOTE3MzMyNFoYDzIwNTUx
         MjEyMTczMzI0WjAaMRgwFgYDVQQDEw9Ib21lbGFiIFJvb3QgQ0EwWTATBgcqhkjO
@@ -17,6 +28,7 @@ spec:
         DjCIL0RdgT4wCgYIKoZIzj0EAwIDSAAwRQIgQcjR8kOY2MwiAHHrBaammsbxGt9E
         TsrooXDJa3bQEl0CIQCdTRbXqlUActr/CsouI75C2lSZ9r6/+T3xqO8XbCWfiA==
         -----END CERTIFICATE-----
+
   target:
     configMap:
       key: ca-certificates.crt
