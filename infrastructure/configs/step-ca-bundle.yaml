@@ -11,4 +11,4 @@ spec:
         key: ca.crt
   target:
     configMap:
-      key: ca-bundle.pem
+      key: ca-certificates.crt
