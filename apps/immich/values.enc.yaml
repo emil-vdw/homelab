@@ -1,0 +1,55 @@
+controllers:
+  main:
+    containers:
+      main:
+        env:
+          #ENC[AES256_GCM,data:8SZyzLFNiY23v00m2ySgMj/5fsauqRC76nEd,iv:LKfR0LlYWuPaRmGXKPUKmf8Y8R0Hqi3JrW9zFo0r0cA=,tag:Wyrb/BHbAoyo/7sER0zLDQ==,type:comment]
+          DB_HOSTNAME: ENC[AES256_GCM,data:gCByRYNONcW+LZuuqj08tuLufMQM8iotrcpQ7ij7p/w04iA1uu4=,iv:DvYZK+J7eavI9yCw4DlthuSfYWa1jSswLTGISE0cFPo=,tag:ODDXx0JbpDyh8rjkAMzyAA==,type:str]
+          DB_PORT: ENC[AES256_GCM,data:krCd7Q==,iv:yZP8DFN2lbdURmxF2NCPARlEzW6l4XUa7IcS5UFrqok=,tag:+4GdZux4utF0d5/raeehmw==,type:str]
+          DB_USERNAME: ENC[AES256_GCM,data:ENa7tsI+,iv:Z9RWgD6whw55R0M+RQGoMAobHCA1CrrwbQ8Pwr0Okiw=,tag:tvO0oX5mluBJJzQdx9nfow==,type:str]
+          DB_PASSWORD: ENC[AES256_GCM,data:fTr0BGkq,iv:8szukU1ZJkfmXsyk5NK/hTW0m7hmqJaWBvgn3CgdxP8=,tag:CXu74+IILnnWkYWLcZTzHQ==,type:str]
+          DB_DATABASE_NAME: ENC[AES256_GCM,data:q3BfMlK7,iv:ctgrveARrJyZbHFxjak51WDhGKc27PvhFh60catEidg=,tag:IgGrkZAMvOsqXjoL2P0hXA==,type:str]
+immich:
+  persistence:
+    library:
+      existingClaim: ENC[AES256_GCM,data:l0AvmYCI/vTgJeq/PdU=,iv:krVUOPfYVM3PTiEk4eRGgz/yo3JRNM7KJjd5alLCBRU=,tag:ZaV9TxOyuJIzR15OxDyAMA==,type:str]
+  configuration: {}
+  configurationKind: ENC[AES256_GCM,data:Sf+qcWG5boTZ,iv:YdcVgYRORo46hlePJXobDJkL/VW6QjDRPH1BWZISgHw=,tag:ojKAfVRz1Qa0z6oWUZC7bg==,type:str]
+valkey:
+  enabled: ENC[AES256_GCM,data:vrvB1w==,iv:XjC7eX/FfD9yQ1I3qXBrAOAdhkADTEQ4CzgDIvDkIhQ=,tag:kH65R8ToCgVyVKlWMwD3pQ==,type:bool]
+  persistence:
+    data:
+      enabled: ENC[AES256_GCM,data:pnyI1Q==,iv:jPXhTTxx25cwHpATEAQwpj3812EELWxEkCUae0AK484=,tag:9llHwAPluXo1An+zOtCTFw==,type:bool]
+      size: ENC[AES256_GCM,data:/bp9,iv:L6vMMy718r7rGeQGDoXgUp4x28QS6ekvFcQK4xLIx9o=,tag:5eEd6egW0QHDv08NSL/VNw==,type:str]
+      type: ENC[AES256_GCM,data:ffo9enye4vNJf/hVUhTsqyXbSM4R,iv:uTpEfW86enOlLCjVLZTe/IE4rrQOQdIeex7NVuqbD74=,tag:AqDi7kTxJUsGN9T7t36+OQ==,type:str]
+      accessMode: ENC[AES256_GCM,data:f1WE6KpO+68QVLdF/Q==,iv:T5rB92rw6D+IvRym4tDMPcWSKX7F7SJlNue4R3jG22M=,tag:iyhnmBy4YEzwyRq7TdHb0w==,type:str]
+      storageClass: ENC[AES256_GCM,data:doRI/ShJcJKqpORW3VEEoHt/,iv:LuxFoaZL5bgm/MJR7FqlHhtEJRVId9ZxSI0XG0rRWZk=,tag:hQ+9g7IM0y3uTSLTo/x67w==,type:str]
+server:
+  ingress:
+    main:
+      #ENC[AES256_GCM,data:yChoACb0r1WtVncO1bn5JmUTqk3a50l0CFWzJ9ujyXVb,iv:rAXkbDaR4Z2MTogmJ+t9J4jPweITllujz5B7nQx+D1I=,tag:LRkNhCJcSyX8j41MyanNsg==,type:comment]
+      enabled: ENC[AES256_GCM,data:fGFKrhs=,iv:xLuE904Kw8sySgpPMj849MTF5DzNVVdRdVQi+3QIkec=,tag:f6ZXIKIEAx4H4oMg0uJK9g==,type:bool]
+machine-learning:
+  enabled: ENC[AES256_GCM,data:iKvXjg==,iv:Jr0MS9zJGu8kW25qqu0ixIls3/yECoKntk23VGIlD/s=,tag:0ZufuFXOLuftPX77Ww275A==,type:bool]
+  persistence:
+    cache:
+      enabled: ENC[AES256_GCM,data:ZvIYtQ==,iv:pnEDgt19VP9P0aD5rGCItXHm5tIvdVia+CdUoHalU7g=,tag:xGa8IxCLTPNJrmJQG4317A==,type:bool]
+      type: ENC[AES256_GCM,data:ylc61/ULiR4yigaj137LiGuvyoB5,iv:W2bNglYQU2KltfRQVFZT+EOjudg0LZAXQtkvkqHpFVM=,tag:Z3yKnnzD8bZta29Q9Jx1Fw==,type:str]
+      size: ENC[AES256_GCM,data:wOj+3A==,iv:2+jgy7alL60lCnPQRvm1UYkyWrvD0EW+eV7KMg6To/k=,tag:y7WnpHdYVs9Mo3LftrABRQ==,type:str]
+      accessMode: ENC[AES256_GCM,data:6QT8s/6DpiyFLxfAvA==,iv:x/EbxrM7uTIOJgD1iWcwmZoV0pY2Di/JVjuGTkPooD4=,tag:pr6l0qnMeDvi+PMGhqtYnQ==,type:str]
+      storageClass: ENC[AES256_GCM,data:5LMYm7GAC64ztQxTSc+Gv7BT,iv:x5cGW8OthsnQ8x/2yjgBcmhBWVoHIqc5GjX4k9drjIY=,tag:FwUfSLH0RtOKgLrAYlTyXg==,type:str]
+sops:
+  age:
+    - recipient: age1am0hru25ljjzpf37x8p8v3953qvpjp7ve9f5rwx0fzpjqagfjpqs55kkug
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBjcEM4ZVZmRlRod2RBRE5t
+        K1U1UWt2RUJnb0pTNjlIMVNoUFN2d1VGeVdRCm00cjVabmRoWlo3L3R1N0hoSVRW
+        Q296anY1aW5IRDNLOExqNmVxVVMzbGsKLS0tICtzVkFIZmpYT25jbDRyNzlVYmM2
+        U1FEclhROWNMS0w5Wjd6ODdFQzFlYm8KntE/diwDhbIlNuTjaQTGAVwlr8pQtUUy
+        oGuYHADlUN/21DpfzutHCtcCv0agSkvxPFzZ/xWIJjOjcMj2uneN0w==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-12-27T13:17:25Z"
+  mac: ENC[AES256_GCM,data:T9L/WX/37G0H1CaHeyQ5nGaPCi+4Cbuw57qDoC4R9y74zinucl9XaUUGjiTS9JT5cyzsSRtEOPNQXLCxXkfsP6p73Gv+EPsWwvpELOKwnIwIg2YBwCKW3SUzvRtZBIqSsvtCpov2fPOXPqI3pQ18CTzcmdYe5+ppnqBJkF+wux4=,iv:8dyrNBOjcwlLuEP2EsZsMlC4jtUMDHqddDwWLO+l61g=,tag:EodH23LfBMlcEFPhiwBCmw==,type:str]
+  unencrypted_suffix: _unencrypted
+  version: 3.11.0
