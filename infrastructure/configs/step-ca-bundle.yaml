@@ -1,0 +1,19 @@
+apiVersion: trust.cert-manager.io/v1alpha1
+kind: Bundle
+metadata:
+  name: internal-step-root
+spec:
+  sources:
+    - useDefaultCAs: true
+    - secret:
+        name: step-root-ca
+        key: ca.crt
+        namespace: cert-manager
+
+  target:
+    configMap:
+      key: ca-bundle.pem
+
+    namespaceSelector:
+      matchLabels:
+        trust: enabled
