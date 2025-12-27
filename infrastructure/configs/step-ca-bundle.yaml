@@ -6,9 +6,17 @@ metadata:
 spec:
   sources:
     - useDefaultCAs: true
-    - secret:
-        name: step-root-ca
-        key: ca.crt
+    - inLine: |
+        -----BEGIN CERTIFICATE-----
+        MIIBejCCASCgAwIBAgIRAJsInPOCUMOO3WyrmOpnHhYwCgYIKoZIzj0EAwIwGjEY
+        MBYGA1UEAxMPSG9tZWxhYiBSb290IENBMCAXDTI1MTIxOTE3MzMyNFoYDzIwNTUx
+        MjEyMTczMzI0WjAaMRgwFgYDVQQDEw9Ib21lbGFiIFJvb3QgQ0EwWTATBgcqhkjO
+        PQIBBggqhkjOPQMBBwNCAATbUn/YHySf625S7y3lXcfvyFQprmgYEPfQTsQOy04L
+        ENCv2KuIdSx49hVGCk1rcHKnxw0tEVszoAAziMZ8l0IGo0UwQzAOBgNVHQ8BAf8E
+        BAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBATAdBgNVHQ4EFgQUFDewOVDbypuqhpbP
+        DjCIL0RdgT4wCgYIKoZIzj0EAwIDSAAwRQIgQcjR8kOY2MwiAHHrBaammsbxGt9E
+        TsrooXDJa3bQEl0CIQCdTRbXqlUActr/CsouI75C2lSZ9r6/+T3xqO8XbCWfiA==
+        -----END CERTIFICATE-----
   target:
     configMap:
       key: ca-certificates.crt
