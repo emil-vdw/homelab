@@ -23,3 +23,11 @@ spec:
         memory: 1000Mi
     nodeSelector:
       worker: "true"
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: truenas-fast-iscsi
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 5Gi
