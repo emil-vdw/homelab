@@ -7,7 +7,6 @@ resources:
   - ingressroute.yaml
   - certificate.yaml
   - pvc.yaml
-  - ingressroute.yaml
 
 secretGenerator:
   - name: immich-values
